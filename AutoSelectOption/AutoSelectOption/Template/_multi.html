@@ -1,0 +1,31 @@
+﻿<link href="../Content/style.css" rel="stylesheet" />
+<table class="table">
+    <thead>
+        <tr>
+            <th ng-repeat="columName in table.columnNames">{{columName}}</th>
+        <tr>
+            <th ng-repeat="col in table.rows">
+                <form>
+                    <div class="multiselect">
+                        <div class="selectBox" ng-click="showCheckboxes($index)">
+                            <select class="form-control">
+                                <option>Select an option</option>
+                            </select>
+                            <div class="overSelect"></div>
+                        </div>
+                        <div class="hideboxes" id="checkboxes{{$index}}">
+                            <input type="text" ng-model="col.filter" class="form-control col-md-12" />
+                            <label ng-repeat="bbb in col.datas | filter: col.filter | filtetFilters: listFilterId: headFilter" for={{"bbb.id.value"}} style="width:100%" ng-click="addId(bbb)"><input type="checkbox" id="{{bbb.id.value}}" ng-model="bbb.check" /> {{bbb.value}}</label>
+                        </div>
+                    </div>
+                </form>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="element in arrayList | columnFilter: table">
+            <td ng-repeat="columName in table.columnNames">{{element[columName]}}</td>
+        </tr>
+    </tbody>
+</table>
+
