@@ -1,4 +1,4 @@
-﻿tableFilter.controller('HomeController', function ($scope, arrayFactory, arrayOptions) {
+﻿tableFilter.controller('HomeController', function ($scope) {
     $scope.title = "simple angularjs directive for table, multi select on column data";
 
     /* you can use factory for get datas
