@@ -1,2 +1,2 @@
-# autoDrops
+# AngularJs table directive
 create select options from if you need filtering data in table more of one selected value maybe you have a problem, because more of standard AngularJs table filters not support that, we have filters for one input.   Inspired by this problem I decided publish one of  simple directive for that.  If you want use you can download mvc project from github   or you can see how directive work on this link:  https://jsfiddle.net/jasmin_kurtic/yat6ghjx/ Thank you for reading and testing. 
